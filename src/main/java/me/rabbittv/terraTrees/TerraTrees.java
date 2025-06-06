@@ -39,8 +39,11 @@ public final class TerraTrees extends JavaPlugin implements Listener {
         }
     }
 
-    public void spawnTerraStructure(WritableWorld world, Vector3Int location, String structureId) {
-        ConfigPack pack = world.getPack();
+    public void spawnTerraStructure(World world, Location location, String structureId) {
+        BukkitServerWorld TerraWorld = new BukkitServerWorld(world);
+        Vector3Int vector = Vector3Int.of((int)Math.floor(location.getX()), (int)Math.floor(location.getY()), (int)Math.floor(location.getZ()));
+
+        ConfigPack pack = TerraWorld.getPack();
         if (pack == null) {
             this.getLogger().warning("Could not find a config pack for the current world.");
         } else {
@@ -54,7 +57,7 @@ public final class TerraTrees extends JavaPlugin implements Listener {
             Random random = new Random();
             Rotation rotation = Rotation.NONE;
 
-            boolean generated = structure.generate(location, world, random, rotation);
+            boolean generated = structure.generate(vector, TerraWorld, random, rotation);
 
             if (generated && config.getBoolean("debug")) {
                 getLogger().info("Successfully spawned structure '" + structureId + "' at " + location.toString());
@@ -72,10 +75,7 @@ public final class TerraTrees extends JavaPlugin implements Listener {
                 e.setCancelled(true);
                 Location location = e.getLocation();
                 World world = location.getWorld();
-                BukkitServerWorld w = new BukkitServerWorld(world);
-                Vector3Int l = Vector3Int.of((int)Math.floor(location.getX()), (int)Math.floor(location.getY()), (int)Math.floor(location.getZ()));
-
-                this.spawnTerraStructure(w, l, structures.getString("oak-tree", "structure-terrascript-loader:oak_tree_procedural"));
+                this.spawnTerraStructure(world, location, structures.getString("oak-tree", "structure-terrascript-loader:oak_tree_procedural"));
             }
         } else if (e.getSpecies() == TreeType.BIRCH) {
             Material type = e.getLocation().getBlock().getType();
@@ -83,10 +83,7 @@ public final class TerraTrees extends JavaPlugin implements Listener {
                 e.setCancelled(true);
                 Location location = e.getLocation();
                 World world = location.getWorld();
-                BukkitServerWorld w = new BukkitServerWorld(world);
-                Vector3Int l = Vector3Int.of((int)Math.floor(location.getX()), (int)Math.floor(location.getY()), (int)Math.floor(location.getZ()));
-
-                this.spawnTerraStructure(w, l, structures.getString("birch-tree", "structure-terrascript-loader:birch_tree_procedural"));
+                this.spawnTerraStructure(world, location, structures.getString("birch-tree", "structure-terrascript-loader:birch_tree_procedural"));
 
             }
         }
