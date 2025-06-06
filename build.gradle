@@ -16,10 +16,17 @@ repositories {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
     }
+    maven {
+        name = "terra"
+        url = "https://repo.codemc.org/repository/maven-public/"
+    }
 }
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")
+    compileOnly("com.dfsek.terra:api:6.6.1-BETA+83bc2c902")
+    compileOnly("com.dfsek.terra:v1_21_3:6.6.1-BETA+83bc2c902")
+
 }
 
 tasks {
