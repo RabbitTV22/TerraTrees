@@ -77,6 +77,18 @@ public final class TerraTrees extends JavaPlugin implements Listener {
 
                 this.spawnTerraStructure(w, l, structures.getString("oak-tree", "structure-terrascript-loader:oak_tree_procedural"));
             }
+        } else if (e.getSpecies() == TreeType.BIRCH) {
+            Material type = e.getLocation().getBlock().getType();
+            if (type == Material.BIRCH_SAPLING) {
+                e.setCancelled(true);
+                Location location = e.getLocation();
+                World world = location.getWorld();
+                BukkitServerWorld w = new BukkitServerWorld(world);
+                Vector3Int l = Vector3Int.of((int)Math.floor(location.getX()), (int)Math.floor(location.getY()), (int)Math.floor(location.getZ()));
+
+                this.spawnTerraStructure(w, l, structures.getString("birch-tree", "structure-terrascript-loader:birch_tree_procedural"));
+
+            }
         }
 
     }

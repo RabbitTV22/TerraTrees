@@ -1,5 +1,6 @@
 structures:
   oak-tree: "structure-terrascript-loader:oak_tree_procedural"
+  birch-tree: "structure-terrascript-loader:birch_tree_procedural"
 settings:
   debug: false
   debug-world-name: world
