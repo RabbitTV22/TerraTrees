@@ -5,8 +5,8 @@ import com.dfsek.terra.api.registry.key.RegistryKey;
 import com.dfsek.terra.api.structure.Structure;
 import com.dfsek.terra.api.util.Rotation;
 import com.dfsek.terra.api.util.vector.Vector3Int;
-import com.dfsek.terra.api.world.WritableWorld;
 import com.dfsek.terra.bukkit.world.BukkitServerWorld;
+import com.dfsek.terra.api.world.WritableWorld;
 
 import java.util.Optional;
 import java.util.Random;
@@ -31,7 +31,7 @@ public final class TerraTrees extends JavaPlugin implements Listener {
         saveDefaultConfig();
         if (this.config.getBoolean("debug")) {
             World bukkitWorld = Bukkit.getWorld(config.getString("debug-world-name", "world"));
-            BukkitServerWorld world = new BukkitServerWorld(bukkitWorld);
+            WritableWorld world = new BukkitServerWorld(bukkitWorld);
             ConfigPack pack = world.getPack();
             pack.getRegistry(Structure.class).keys().forEach((key) -> {
                 this.getLogger().info("Available structure: " + key.toString());

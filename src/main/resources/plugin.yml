@@ -2,3 +2,4 @@ name: TerraTrees
 version: '1.0.0'
 main: me.rabbittv.terraTrees.TerraTrees
 api-version: '1.21'
+depend: [Terra]
