@@ -1,7 +1,7 @@
 structures:
-  oak-tree:
-    enabled: true
-    structure: "structure-terrascript-loader:oak_tree_procedural"
+  oak-tree: # Tree type
+    enabled: true #  If it should spawn a terra structure instead of the vanilla one
+    structure: "structure-terrascript-loader:oak_tree_procedural" # which structure to spawn
   big-oak-tree:
     enabled: true
     structure: "structure-terrascript-loader:oak_tree_procedural"
@@ -48,5 +48,5 @@ structures:
     enabled: false
     structure: "structure-terrascript-loader:huge-crimson-fungus"
 settings:
-  debug: false
-  debug-world-name: world
+  debug: false # Shows a list of available structures in the world name specified below during startup. Also has a few more debug messages.
+  debug-world-name: "world"
