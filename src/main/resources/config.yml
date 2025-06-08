@@ -1,15 +1,52 @@
 structures:
-  oak-tree: "structure-terrascript-loader:oak_tree_procedural"
-  big-oak-tree: "structure-terrascript-loader:oak_tree_procedural"
-  birch-tree: "structure-terrascript-loader:birch_tree_procedural"
-  acacia-tree: "structure-terrascript-loader:acacia_tree_procedural"
-  cherry-tree: "structure-terrascript-loader:cherry_blossom_tree_procedural"
-  dark-oak-tree: "structure-terrascript-loader:dark_oak_tree_procedural"
-  tall-jungle-tree: "structure-terrascript-loader:large_jungle_tree_procedural"
-  small-jungle-tree: "structure-terrascript-loader:medium_jungle_tree_procedural"
-  mangrove-tree: "structure-terrascript-loader:mangrove_tree_procedural"
-  pale-oak-tree: "structure-terrascript-loader:large_pale_oak_tree_procedural"
-  spruce-tree: "structure-terrascript-loader:spruce_tree_procedural"
+  oak-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:oak_tree_procedural"
+  big-oak-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:oak_tree_procedural"
+  birch-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:birch_tree_procedural"
+  acacia-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:acacia_tree_procedural"
+  cherry-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:cherry_blossom_tree_procedural"
+  dark-oak-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:large_dark_oak_tree_procedural"
+  tall-jungle-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:large_jungle_tree_procedural"
+  small-jungle-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:medium_jungle_tree_procedural"
+  mangrove-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:mangrove_tree_procedural"
+  pale-oak-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:large_pale_oak_tree_procedural"
+  spruce-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:spruce_tree_procedural"
+  tall-spruce-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:giant_redwood"
+  brown-mushroom:
+    enabled: false
+    structure: "structure-terrascript-loader:large_mixed_mushroom_procedural"
+  red-mushroom:
+    enabled: false
+    structure: "structure-terrascript-loader:large_mixed_mushroom_procedural"
+  warped-fungus:
+    enabled: false
+    structure: "structure-terrascript-loader:huge-warped-fungus"
+  crimson-fungus:
+    enabled: false
+    structure: "structure-terrascript-loader:huge-crimson-fungus"
 settings:
   debug: false
   debug-world-name: world
