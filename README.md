@@ -1,1 +1,61 @@
-todo
+A plugin to generate Terra structures as trees.
+
+### This plugin requires [Terra](https://modrinth.com/plugin/terra) to work.
+
+When using the plugin you might notice that when growing normal trees they look lame compared to the Terra ones. Well this plugin fixes that! You can specify any structure in the Terra pack and it will generate as any tree type you want. It even supports nether trees and mushrooms!
+
+Default config:
+```yaml
+structures:
+  oak-tree: # Tree type
+    enabled: true #  If it should spawn a terra structure instead of the vanilla one
+    structure: "structure-terrascript-loader:oak_tree_procedural" # which structure to spawn
+  big-oak-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:oak_tree_procedural"
+  birch-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:birch_tree_procedural"
+  acacia-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:acacia_tree_procedural"
+  cherry-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:cherry_blossom_tree_procedural"
+  dark-oak-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:large_dark_oak_tree_procedural"
+  tall-jungle-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:large_jungle_tree_procedural"
+  small-jungle-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:medium_jungle_tree_procedural"
+  mangrove-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:mangrove_tree_procedural"
+  pale-oak-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:large_pale_oak_tree_procedural"
+  spruce-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:spruce_tree_procedural"
+  tall-spruce-tree:
+    enabled: true
+    structure: "structure-terrascript-loader:giant_redwood"
+  brown-mushroom:
+    enabled: false
+    structure: "structure-terrascript-loader:large_mixed_mushroom_procedural"
+  red-mushroom:
+    enabled: false
+    structure: "structure-terrascript-loader:large_mixed_mushroom_procedural"
+  warped-fungus:
+    enabled: false
+    structure: "structure-terrascript-loader:huge-warped-fungus"
+  crimson-fungus:
+    enabled: false
+    structure: "structure-terrascript-loader:huge-crimson-fungus"
+settings:
+  debug: false # Shows a list of available structures in the world name specified below during startup. Also has a few more debug messages.
+  debug-world-name: "world"
+```
