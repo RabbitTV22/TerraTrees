@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8834968b-492b-4e46-a1d5-76c89b3cad40" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+    <list default="true" id="8834968b-492b-4e46-a1d5-76c89b3cad40" name="Changes" comment="kotlin">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/me/rabbittv/terraTrees/TerraTrees.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/me/rabbittv/terraTrees/TerraTrees.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/paper-plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/paper-plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +37,12 @@
                 <item name="TerraTrees" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TerraTrees" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -42,7 +50,20 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -53,33 +74,105 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/RabbitTV22/TerraTrees&quot;,
-    &quot;accountId&quot;: &quot;5efc6e69-1050-4866-94e5-29dfa8bd54da&quot;
+    &quot;url&quot;: &quot;https://github.com/RabbitTV22/TerraTrees/&quot;,
+    &quot;accountId&quot;: &quot;06e8aeed-cda1-4bcd-b44f-8d263fcee2de&quot;
   }
 }</component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-9.0.0-bin/d6wjpkvcgsg3oed0qlfss3wgl/gradle-9.0.0" javaHome="/usr/lib/jvm/java-21-openjdk" gradleVersion="9.0.0" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2y73oPvf31CluzAFmwsC8WmZx8X" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Rebasing a",
-    "last_opened_file_path": "/home/alec/IdeaProjects/TerraTrees",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TerraTrees [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TerraTrees [clean].executor&quot;: &quot;Run&quot;,
+    &quot;OpenRewrite.Faces4xMigrationToFaces41x.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;/home/alec/.local/share/JetBrains/IntelliJIdea2025.2/Shell Script/shellcheck&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;kotlin&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alec/IdeaProjects/TerraTrees&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="Gradle.TerraTrees [clean]">
+    <configuration name="TerraTrees [build]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TerraTrees [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Faces4xMigrationToFaces41x" type="OpenRewriteRunConfigurationType" factoryName="OpenRewrite" temporary="true" nameIsGenerated="true">
+      <option name="activeRecipes" value="org.openrewrite.java.migrate.jakarta.Faces4xMigrationToFaces41x" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.TerraTrees [clean]" />
+        <item itemvalue="OpenRewrite.Faces4xMigrationToFaces41x" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
       </set>
     </attachedChunks>
   </component>
@@ -92,11 +185,111 @@
       <updated>1749171959543</updated>
       <workItem from="1749171961803" duration="293000" />
       <workItem from="1749172271257" duration="22000" />
+      <workItem from="1749328548222" duration="2993000" />
+      <workItem from="1749339518791" duration="4626000" />
+      <workItem from="1749396865330" duration="7547000" />
+      <workItem from="1749686722762" duration="20000" />
+      <workItem from="1749686763503" duration="2369000" />
+      <workItem from="1749738357584" duration="21000" />
+      <workItem from="1754869282558" duration="756000" />
+      <workItem from="1754870070519" duration="23000" />
+      <workItem from="1754870124464" duration="2000" />
+      <workItem from="1755809501473" duration="3385000" />
+      <workItem from="1755817714266" duration="6799000" />
+      <workItem from="1756154257251" duration="11000" />
+      <workItem from="1756595887308" duration="192000" />
+      <workItem from="1756596259433" duration="1622000" />
     </task>
+    <task id="LOCAL-00001" summary="Birch trees">
+      <option name="closed" value="true" />
+      <created>1749213310131</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749213310131</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fix plugin not loading">
+      <option name="closed" value="true" />
+      <created>1749329128919</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749329128919</updated>
+    </task>
+    <task id="LOCAL-00003" summary="More tree types">
+      <option name="closed" value="true" />
+      <created>1749339577749</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749339577749</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Final commit for version 1.0.0">
+      <option name="closed" value="true" />
+      <created>1749403851079</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749403851079</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Comments">
+      <option name="closed" value="true" />
+      <created>1749403997360</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1749403997360</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update 1.0.1">
+      <option name="closed" value="true" />
+      <created>1754869772359</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1754869772359</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Redo code structure">
+      <option name="closed" value="true" />
+      <created>1755812121404</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1755812121404</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Basic biome list command">
+      <option name="closed" value="true" />
+      <created>1755820588925</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1755820588925</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Enhanced biome list command">
+      <option name="closed" value="true" />
+      <created>1755823851554</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1755823851554</updated>
+    </task>
+    <task id="LOCAL-00010" summary="kotlin">
+      <option name="closed" value="true" />
+      <created>1756596832617</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1756596832617</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:net.kyori:adventure-api" />
+    <option featureType="dependencySupport" implementationName="executable:podman" />
+    <option featureType="dependencySupport" implementationName="java:io.papermc.paper:paper-api" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -108,5 +301,18 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Birch trees" />
+    <MESSAGE value="Fix plugin not loading" />
+    <MESSAGE value="More tree types" />
+    <MESSAGE value="Final commit for version 1.0.0" />
+    <MESSAGE value="Comments" />
+    <MESSAGE value="update 1.0.1" />
+    <MESSAGE value="Redo code structure" />
+    <MESSAGE value="Basic biome list command" />
+    <MESSAGE value="Enhanced biome list command" />
+    <MESSAGE value="kotlin" />
+    <option name="LAST_COMMIT_MESSAGE" value="kotlin" />
   </component>
 </project>

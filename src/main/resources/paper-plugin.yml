@@ -1,4 +1,4 @@
-name: TerraTreesKotlin
+name: TerraTrees
 version: '1.0.3'
-main: me.rabbittv.terraTreesKotlin.TerraTreesKotlin
+main: me.rabbittv.terraTrees.TerraTrees
 api-version: '1.21'
