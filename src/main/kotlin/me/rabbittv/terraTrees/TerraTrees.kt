@@ -1,14 +1,9 @@
 package me.rabbittv.terraTrees
 
 import co.aikar.commands.PaperCommandManager
-import com.dfsek.terra.api.config.ConfigPack
 import com.dfsek.terra.api.structure.Structure
-import com.dfsek.terra.api.world.WritableWorld
 import com.dfsek.terra.bukkit.world.BukkitServerWorld
-import io.papermc.paper.registry.keys.StructureKeys
 import org.bukkit.Bukkit
-import org.bukkit.World
-import org.bukkit.configuration.ConfigurationSection
 import org.bukkit.plugin.java.JavaPlugin
 
 class TerraTreesKotlin : JavaPlugin() {
@@ -22,11 +17,9 @@ class TerraTreesKotlin : JavaPlugin() {
             val bukkitWorld = Bukkit.getWorld(settings.getString("debug-world-name", "world").toString())!!
             val world = BukkitServerWorld(bukkitWorld)
             val pack = world.pack
-            pack.getRegistry(Structure)
+            pack.getRegistry(Structure::class.java).keys().forEach { key ->
+                logger.info("Available Structure: $key")
+            }
         }
-    }
-
-    override fun onDisable() {
-        // Plugin shutdown logic
     }
 }
