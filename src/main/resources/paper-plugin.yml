@@ -1,10 +1,4 @@
-name: TerraTrees
-version: '1.0.2'
-main: me.rabbittv.terraTrees.TerraTrees
+name: TerraTreesKotlin
+version: '1.0.3'
+main: me.rabbittv.terraTreesKotlin.TerraTreesKotlin
 api-version: '1.21'
-folia-supported: true
-dependencies:
-  server:
-    Terra:
-      load: BEFORE
-      required: true
