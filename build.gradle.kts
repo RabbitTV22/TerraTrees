@@ -26,8 +26,8 @@ repositories {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    compileOnly("com.dfsek.terra:api:6.6.1-BETA+83bc2c902")
-    compileOnly("com.dfsek.terra:v1_21_3:6.6.1-BETA+83bc2c902")
+    compileOnly("com.dfsek.terra:api:6.6.5-BETA+cb8aefe8d")
+    compileOnly("com.dfsek.terra:v1_21_8:6.6.5-BETA+b149497c6")
     implementation("co.aikar:acf-paper:0.5.1-SNAPSHOT")
 }
 
