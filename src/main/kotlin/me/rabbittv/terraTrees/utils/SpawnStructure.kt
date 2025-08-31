@@ -32,9 +32,9 @@ class SpawnStructure(private val plugin: TerraTrees) {
             val generated = structure.generate(vector, TerraWorld, random, rotation)
 
             if (generated && plugin.settings.getBoolean("debug")){
-                plugin.logger.info("Successfully spawned structure $StructureID at $location.")
+                plugin.logger.info("Successfully spawned structure $StructureID at ${location.blockX}, ${location.blockY}, ${location.blockZ}")
             } else if (plugin.settings.getBoolean("debug")) {
-                plugin.logger.warning("Failed to spawn structure $StructureID at $location.")
+                plugin.logger.warning("Failed to spawn structure $StructureID at ${location.blockX}, ${location.blockY}, ${location.blockZ}.")
             }
         }
     }

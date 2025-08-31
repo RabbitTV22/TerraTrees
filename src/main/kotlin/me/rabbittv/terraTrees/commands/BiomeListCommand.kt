@@ -31,11 +31,12 @@ class BiomeListCommand(private val plugin: TerraTrees) : BaseCommand() {
            biome_names.add("terra:${pack.id.lowercase()}/${pack.id.lowercase()}$biome_name")
            biome_names_raw.add(biome_name)
        }
-       Collections.sort(biome_names)
-       Collections.sort(biome_names_raw)
+       biome_names.sort()
+       biome_names_raw.sort()
        val writer = FileWriter(File(plugin.dataFolder, "biome_list.txt"))
        val writer_raw = FileWriter(File(plugin.dataFolder, "biome_list_raw.txt"))
        for (biome_name in biome_names_raw) {
+           biome_names.add("terra:${pack.id.lowercase()}/${pack.id.lowercase()}$biome_name")
            sender.sendMessage(biome_name)
            writer.write(biome_name + System.lineSeparator())
        }
