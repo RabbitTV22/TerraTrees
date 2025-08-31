@@ -15,7 +15,7 @@ class TerraTrees : JavaPlugin(){
     lateinit var structures: ConfigurationSection
 
     override fun onEnable() {
-        val manager: PaperCommandManager = PaperCommandManager(this)
+        val manager = PaperCommandManager(this)
         saveDefaultConfig()
         manager.registerCommand(BiomeListCommand(this))
         settings = config.getConfigurationSection("settings")!!
