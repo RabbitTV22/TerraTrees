@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'me.rabbittv'
-version = '1.0.2'
+version = '1.0.3'
 
 repositories {
     mavenCentral()
@@ -25,12 +25,17 @@ repositories {
         name = "aikar"
         url = "https://repo.aikar.co/content/groups/aikar/"
     }
+    maven {
+        name = "Solo Studios"
+        url = "https://maven.solo-studios.ca/releases"
+    }
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
-    compileOnly("com.dfsek.terra:api:6.6.1-BETA+83bc2c902")
-    compileOnly("com.dfsek.terra:v1_21_3:6.6.1-BETA+83bc2c902")
+    compileOnly("io.papermc.paper:paper-api:1.21.10-R0.1-SNAPSHOT")
+    compileOnly("com.dfsek.terra:api:7.0.0-BETA+fd3d1ce83")
+    compileOnly("com.dfsek.terra:v1_21_9:7.0.0-BETA+fd3d1ce83")
+    compileOnly("com.dfsek:seismic:2.5.7")
     implementation("co.aikar:acf-paper:0.5.1-SNAPSHOT")
 
 }
