@@ -23,7 +23,7 @@ import java.util.List;
 @CommandAlias("terratrees")
 public class StructureListCommand extends BaseCommand {
 
-    private TerraTrees plugin;
+    private final TerraTrees plugin;
 
     public StructureListCommand(TerraTrees plugin) {
         this.plugin = plugin;

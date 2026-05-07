@@ -12,7 +12,7 @@ import org.bukkit.command.CommandSender;
 @CommandAlias("terratrees")
 public class ReloadCommand extends BaseCommand {
 
-    private TerraTrees plugin;
+    private final TerraTrees plugin;
 
     public ReloadCommand(TerraTrees plugin) {
         this.plugin = plugin;

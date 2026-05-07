@@ -21,7 +21,7 @@ import java.util.List;
 @CommandAlias("terratrees")
 public class BiomeListCommand extends BaseCommand {
 
-    private TerraTrees plugin;
+    private final TerraTrees plugin;
 
     public BiomeListCommand(TerraTrees plugin) {
         this.plugin = plugin;

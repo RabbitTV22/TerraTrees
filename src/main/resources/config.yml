@@ -37,10 +37,10 @@ structures:
     structure: "structure-terrascript-loader:giant_redwood"
   brown-mushroom:
     enabled: false
-    structure: "structure-terrascript-loader:large_mixed_mushroom_procedural"
+    structure: "structure-terrascript-loader:medium_mixed_mushroom_procedural"
   red-mushroom:
     enabled: false
-    structure: "structure-terrascript-loader:large_mixed_mushroom_procedural"
+    structure: "structure-terrascript-loader:medium_mixed_mushroom_procedural"
   warped-fungus:
     enabled: false
     structure: "structure-terrascript-loader:huge-warped-fungus"
