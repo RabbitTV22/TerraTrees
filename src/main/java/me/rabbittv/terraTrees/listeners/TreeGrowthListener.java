@@ -82,7 +82,7 @@ public class TreeGrowthListener implements Listener {
                 World world = location.getWorld();
                 Location swCorner = AlignTree.alignSouth(location, Material.JUNGLE_SAPLING);
                 if (swCorner == null) return;
-                structure.spawnTerraStructure(world, location, plugin.getStructures().getConfigurationSection("tall-jungle-tree").getString("structure", "structure-terrascript-loader:large_jungle_tree_procedural"));
+                structure.spawnTerraStructure(world, swCorner, plugin.getStructures().getConfigurationSection("tall-jungle-tree").getString("structure", "structure-terrascript-loader:large_jungle_tree_procedural"));
 
             }
         } else if (e.getSpecies() == TreeType.SMALL_JUNGLE && plugin.getStructures().getConfigurationSection("small-jungle-tree").getBoolean("enabled")) {
