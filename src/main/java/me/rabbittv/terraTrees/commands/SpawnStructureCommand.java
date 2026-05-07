@@ -70,25 +70,19 @@ public class SpawnStructureCommand extends BaseCommand {
 
         SpawnStructure generate = new SpawnStructure(plugin);
 
-        if (Bukkit.getWorld(args[1]) == null) {
-            sender.sendMessage(mm.deserialize("<#dd600d>World not found!"));
-            return;
-        }
+        World world = null;
+        Location location = null;
+        String structure;
 
         // /terratrees spawnstructure <structure> <world> <x> <y> <z>
         if (args.length == 5) {
 
-            String structure = getStructure(args[0], Bukkit.getWorld(args[1]));
-            if (structure == null) {
-                sender.sendMessage(mm.deserialize("<#dd600d>Structure not found!"));
-                return;
-            }
             try {
                 double x = Double.parseDouble(args[2]);
                 double y = Double.parseDouble(args[3]);
                 double z = Double.parseDouble(args[4]);
-                Location location = new Location(Bukkit.getWorld(args[1]), x, y, z);
-                generate.spawnTerraStructure(Bukkit.getWorld(args[1]), location, structure);
+                location = new Location(Bukkit.getWorld(args[1]), x, y, z);
+                world = Bukkit.getWorld(args[1]);
             } catch (NumberFormatException ignored) {
                 sender.sendMessage(mm.deserialize("<#dd600d>Invalid coordinates!"));
                 return;
@@ -99,17 +93,12 @@ public class SpawnStructureCommand extends BaseCommand {
         } else if (args.length == 4) {
 
             if (sender instanceof Entity e) {
-                String structure = getStructure(args[0], Bukkit.getWorld(args[1]));
-                if (structure == null) {
-                    sender.sendMessage(mm.deserialize("<#dd600d>Structure not found!"));
-                    return;
-                }
                 try {
                     double x = Double.parseDouble(args[2]);
                     double z = Double.parseDouble(args[3]);
                     double y = e.getLocation().getBlockY();
-                    Location location = new Location(Bukkit.getWorld(args[1]), x, y, z);
-                    generate.spawnTerraStructure(Bukkit.getWorld(args[1]), location, structure);
+                    world = Bukkit.getWorld(args[1]);
+                    location = new Location(world, x, y, z);
                 } catch (NumberFormatException ignored) {
                     sender.sendMessage(mm.deserialize("<#dd600d>Invalid coordinates!"));
                     return;
@@ -121,15 +110,11 @@ public class SpawnStructureCommand extends BaseCommand {
 
         // /terratrees spawnstructure <structure> <world> <entity|player>
         } else if (args.length == 3) {
+
             Entity e = getEntity(args[2]);
-            String structure = getStructure(args[0], Bukkit.getWorld(args[1]));
-            if (structure == null) {
-                sender.sendMessage(mm.deserialize("<#dd600d>Structure not found!"));
-                return;
-            }
             if (e != null) {
-                Location location = e.getLocation();
-                generate.spawnTerraStructure(Bukkit.getWorld(args[1]), location, structure);
+                location = e.getLocation();
+                world = Bukkit.getWorld(args[1]);
             } else {
                 sender.sendMessage(mm.deserialize("<#dd600d>Player or entity not found!"));
                 return;
@@ -137,37 +122,38 @@ public class SpawnStructureCommand extends BaseCommand {
 
         // /terratrees spawnstructure <structure> <entity|player>
         } else if (args.length == 2) {
-            Entity e = getEntity(args[0]);
+
+            Entity e = getEntity(args[1]);
 
             if (e != null) {
-                Location location = e.getLocation();
-                World w = e.getWorld();
-
-                String structure = getStructure(args[0], w);
-                if (structure == null) {
-                    sender.sendMessage(mm.deserialize("<#dd600d>Structure not found!"));
-                    return;
-                }
-
-                generate.spawnTerraStructure(w, location, structure);
+                location = e.getLocation();
+                world = e.getWorld();
             } else {
                 sender.sendMessage(mm.deserialize("<#dd600d>Player or entity not found!"));
                 return;
             }
 
         // /terratrees spawnstructure <structure>
+        } else if (sender instanceof Entity e) {
+            location = e.getLocation();
+            world = e.getWorld();
         } else {
-
-            if (sender instanceof Entity e) {
-                String structure = getStructure(args[0], e.getWorld());
-                if (structure == null) {
-                    sender.sendMessage(mm.deserialize("<#dd600d>Structure not found!"));
-                    return;
-                }
-                generate.spawnTerraStructure(e.getWorld(), e.getLocation(), structure);
-            }
+            sender.sendMessage(mm.deserialize("<#dd600d>You must be an entity or a player!"));
+            return;
         }
 
+
+
+        if (world == null) {
+            sender.sendMessage(mm.deserialize("<#dd600d>World not found!"));
+            return;
+        }
+        structure = getStructure(args[0], world);
+        if (structure == null) {
+            sender.sendMessage(mm.deserialize("<#dd600d>Structure not found!"));
+            return;
+        }
+        generate.spawnTerraStructure(world, location, structure);
         sender.sendMessage(mm.deserialize("<gradient:#F454CF:#5457B6>Structure spawned!"));
 
     }
