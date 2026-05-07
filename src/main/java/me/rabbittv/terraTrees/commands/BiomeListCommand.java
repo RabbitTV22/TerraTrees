@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-@CommandAlias("terra")
+@CommandAlias("terratrees")
 public class BiomeListCommand extends BaseCommand {
 
     private TerraTrees plugin;
@@ -28,7 +28,7 @@ public class BiomeListCommand extends BaseCommand {
     }
 
     @Subcommand("listbiomes")
-    @Description("List all terra biomes in the current world. Also prints to plugins/TerraTrees/biome_list.txt")
+    @Description("List all terra biomes in the set in config.yml. Also prints to plugins/TerraTrees/biome_list.txt & plugins/TerraTrees/biome_list_raw.txt")
     @CommandPermission("terratrees.listbiomes")
     public void listBiomes(CommandSender sender) throws IOException {
         WritableWorld world = new BukkitServerWorld(Bukkit.getWorld(plugin.settings.getString("debug-world-name", "world")));
