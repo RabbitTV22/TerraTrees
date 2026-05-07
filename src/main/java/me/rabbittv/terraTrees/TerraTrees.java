@@ -7,6 +7,7 @@ import com.dfsek.terra.bukkit.world.BukkitServerWorld;
 import com.dfsek.terra.api.world.WritableWorld;
 import me.rabbittv.terraTrees.commands.BiomeListCommand;
 import me.rabbittv.terraTrees.commands.ReloadCommand;
+import me.rabbittv.terraTrees.commands.SpawnStructureCommand;
 import me.rabbittv.terraTrees.commands.StructureListCommand;
 import me.rabbittv.terraTrees.listeners.TreeGrowthListener;
 import me.rabbittv.terraTrees.utils.SpawnStructure;
@@ -27,6 +28,7 @@ public final class TerraTrees extends JavaPlugin {
         manager.registerCommand(new BiomeListCommand(this));
         manager.registerCommand(new ReloadCommand(this));
         manager.registerCommand(new StructureListCommand(this));
+        manager.registerCommand(new SpawnStructureCommand(this));
         if (this.settings.getBoolean("debug")) {
             World bukkitWorld = Bukkit.getWorld(settings.getString("debug-world-name", "world"));
             WritableWorld world = new BukkitServerWorld(bukkitWorld);

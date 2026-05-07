@@ -40,9 +40,9 @@ public class SpawnStructure {
 
             boolean generated = structure.generate(vector, TerraWorld, random, rotation);
 
-            if (generated && plugin.settings.getBoolean("debug")) {
+            if (generated && plugin.getSettings().getBoolean("debug")) {
                 plugin.getLogger().info("Successfully spawned structure '" + structureId + "' at " + location.toString());
-            } else if (plugin.settings.getBoolean("debug")) {
+            } else if (plugin.getSettings().getBoolean("debug")) {
                 plugin.getLogger().warning("Failed to spawn structure '" + structureId + "' at " + location.toString());
             }
         }
