@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-@CommandAlias("terratrees")
+@CommandAlias("terratrees|tt")
 public class StructureListCommand extends BaseCommand {
 
     private final TerraTrees plugin;

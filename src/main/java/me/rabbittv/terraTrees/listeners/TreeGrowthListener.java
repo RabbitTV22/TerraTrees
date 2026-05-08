@@ -22,10 +22,11 @@ public class TreeGrowthListener implements Listener {
         this.plugin = plugin;
         this.structure = structure;
     }
+
     @EventHandler
     public void onSaplingGrow(StructureGrowEvent e) {
         Material type = e.getLocation().getBlock().getType();
-        if (e.getSpecies() == TreeType.TREE && plugin.getStructures().getConfigurationSection("oak-tree").getBoolean("enabled", true)) {
+        if (e.getSpecies() == TreeType.TREE && plugin.getStructures().getConfigurationSection("oak-tree").getBoolean("enabled")) {
 
             if (type == Material.OAK_SAPLING) {
                 e.setCancelled(true);

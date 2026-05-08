@@ -5,10 +5,7 @@ import com.dfsek.terra.api.config.ConfigPack;
 import com.dfsek.terra.api.structure.Structure;
 import com.dfsek.terra.bukkit.world.BukkitServerWorld;
 import com.dfsek.terra.api.world.WritableWorld;
-import me.rabbittv.terraTrees.commands.BiomeListCommand;
-import me.rabbittv.terraTrees.commands.ReloadCommand;
-import me.rabbittv.terraTrees.commands.SpawnStructureCommand;
-import me.rabbittv.terraTrees.commands.StructureListCommand;
+import me.rabbittv.terraTrees.commands.*;
 import me.rabbittv.terraTrees.listeners.TreeGrowthListener;
 import me.rabbittv.terraTrees.utils.SpawnStructure;
 import org.bstats.bukkit.Metrics;
@@ -29,16 +26,20 @@ public final class TerraTrees extends JavaPlugin {
     public void onEnable() {
         int pluginId = 31191;
         Metrics metrics = new Metrics(this, pluginId);
-        saveResource("messages.yml", false);
-        messagesFile = new File(this.getDataFolder(), "messages.yml");
-        messages = YamlConfiguration.loadConfiguration(messagesFile);
         saveDefaultConfig();
+        messagesFile = new File(this.getDataFolder(), "messages.yml");
+        if (!messagesFile.exists()) {
+            saveResource("messages.yml", false);
+        }
+        messages = YamlConfiguration.loadConfiguration(messagesFile);
         Bukkit.getPluginManager().registerEvents(new TreeGrowthListener(this, new SpawnStructure(this)), this);
         PaperCommandManager manager = new PaperCommandManager(this);
         manager.registerCommand(new BiomeListCommand(this));
         manager.registerCommand(new ReloadCommand(this));
         manager.registerCommand(new StructureListCommand(this));
         manager.registerCommand(new SpawnStructureCommand(this));
+        manager.registerCommand(new RootCommand(this));
+        manager.enableUnstableAPI("help");
         if (this.settings.getBoolean("debug")) {
             World bukkitWorld = Bukkit.getWorld(settings.getString("debug-world-name", "world"));
             WritableWorld world = new BukkitServerWorld(bukkitWorld);

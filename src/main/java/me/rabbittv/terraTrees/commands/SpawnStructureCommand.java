@@ -18,7 +18,7 @@ import org.bukkit.entity.Player;
 
 import java.util.UUID;
 
-@CommandAlias("terratrees")
+@CommandAlias("terratrees|tt")
 public class SpawnStructureCommand extends BaseCommand {
 
     private final TerraTrees plugin;
@@ -56,7 +56,7 @@ public class SpawnStructureCommand extends BaseCommand {
 
 
     @Subcommand("spawnstructure")
-    @Syntax("<Structure Name> <World Name> <Player or X <Y> Z>")
+    @Syntax("<Structure Name> [World Name] [Player or X [Y] Z]")
     @Description("Generate a Terra structure at a specified location")
     @CommandPermission("terratrees.spawnstructure")
     public void spawnStructure(CommandSender sender, String[] args) {

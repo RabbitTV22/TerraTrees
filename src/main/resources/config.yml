@@ -1,7 +1,7 @@
 structures:
   oak-tree: # Tree type
     enabled: true #  If it should spawn a terra structure instead of the vanilla one
-    structure: "structure-terrascript-loader:oak_tree_procedural" # which structure to spawn
+    structure: "structure-terrascript-loader:oak_tree_procedural" # which structure to spawn. you can list all structures with /terratrees liststructures
   big-oak-tree:
     enabled: true
     structure: "structure-terrascript-loader:oak_tree_procedural"

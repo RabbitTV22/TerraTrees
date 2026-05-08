@@ -9,7 +9,7 @@ import me.rabbittv.terraTrees.TerraTrees;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.command.CommandSender;
 
-@CommandAlias("terratrees")
+@CommandAlias("terratrees|tt")
 public class ReloadCommand extends BaseCommand {
 
     private final TerraTrees plugin;
