@@ -129,7 +129,7 @@ public class TreeGrowthListener implements Listener {
                 World world = location.getWorld();
                 Location swCorner = AlignTree.alignSouth(location, Material.SPRUCE_SAPLING);
                 if (swCorner == null) return;
-                structure.spawnTerraStructure(world, swCorner, plugin.getStructures().getConfigurationSection("tall-spruce-tree").getString("structure", "structure-terrascript-loader:giant_redwood"));
+                structure.spawnTerraStructure(world, swCorner, plugin.getStructures().getConfigurationSection("tall-spruce-tree").getString("structure", "structure-terrascript-loader:spruce_tree_procedural_2"));
 
             }
         } else if (e.getSpecies() == TreeType.BROWN_MUSHROOM && plugin.getStructures().getConfigurationSection("brown-mushroom").getBoolean("enabled")) {
@@ -137,7 +137,7 @@ public class TreeGrowthListener implements Listener {
                 e.setCancelled(true);
                 Location location = e.getLocation();
                 World world = location.getWorld();
-                structure.spawnTerraStructure(world, location, plugin.getStructures().getConfigurationSection("brown-mushroom").getString("structure", "structure-terrascript-loader:large_mixed_mushroom_procedural"));
+                structure.spawnTerraStructure(world, location, plugin.getStructures().getConfigurationSection("brown-mushroom").getString("structure", "structure-terrascript-loader:medium_mixed_mushroom_procedural"));
 
             }
         } else if (e.getSpecies() == TreeType.RED_MUSHROOM && plugin.getStructures().getConfigurationSection("red-mushroom").getBoolean("enabled")) {
@@ -145,7 +145,7 @@ public class TreeGrowthListener implements Listener {
                 e.setCancelled(true);
                 Location location = e.getLocation();
                 World world = location.getWorld();
-                structure.spawnTerraStructure(world, location, plugin.getStructures().getConfigurationSection("red-mushroom").getString("structure", "structure-terrascript-loader:large_mixed_mushroom_procedural"));
+                structure.spawnTerraStructure(world, location, plugin.getStructures().getConfigurationSection("red-mushroom").getString("structure", "structure-terrascript-loader:medium_mixed_mushroom_procedural"));
 
             }
         } else if (e.getSpecies() == TreeType.WARPED_FUNGUS && plugin.getStructures().getConfigurationSection("warped-fungus").getBoolean("enabled")) {

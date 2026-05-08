@@ -34,7 +34,7 @@ structures:
     structure: "structure-terrascript-loader:spruce_tree_procedural"
   tall-spruce-tree:
     enabled: true
-    structure: "structure-terrascript-loader:giant_redwood"
+    structure: "structure-terrascript-loader:spruce_tree_procedural_2"
   brown-mushroom:
     enabled: false
     structure: "structure-terrascript-loader:medium_mixed_mushroom_procedural"

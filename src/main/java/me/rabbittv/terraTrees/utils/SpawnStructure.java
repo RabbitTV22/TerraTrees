@@ -32,6 +32,7 @@ public class SpawnStructure {
             Optional<Structure> structureOptional = pack.getRegistry(Structure.class).get(structureKey);
             if (structureOptional.isEmpty()) {
                 plugin.getLogger().warning("Structure with ID '" + structureId + "' not found in config pack.");
+                return;
             }
             Structure structure = structureOptional.get();
 
