@@ -64,14 +64,14 @@ public class SpawnStructureCommand extends BaseCommand {
         MiniMessage mm = MiniMessage.miniMessage();
 
         if  (args.length > 5 || args.length < 1) {
-            sender.sendMessage(mm.deserialize("<#dd600d>You did not follow the correct syntax!"));
+            sender.sendMessage(mm.deserialize((plugin.getMessages().getString("incorrect-syntax", "<#dd600d>You did not follow the correct syntax!"))));
             return;
         }
 
         SpawnStructure generate = new SpawnStructure(plugin);
 
-        World world = null;
-        Location location = null;
+        World world;
+        Location location;
         String structure;
 
         // /terratrees spawnstructure <structure> <world> <x> <y> <z>
@@ -84,7 +84,7 @@ public class SpawnStructureCommand extends BaseCommand {
                 location = new Location(Bukkit.getWorld(args[1]), x, y, z);
                 world = Bukkit.getWorld(args[1]);
             } catch (NumberFormatException ignored) {
-                sender.sendMessage(mm.deserialize("<#dd600d>Invalid coordinates!"));
+                sender.sendMessage(mm.deserialize(plugin.getMessages().getString("invalid-coordinates", "<#dd600d>Invalid coordinates!")));
                 return;
             }
 
@@ -100,11 +100,11 @@ public class SpawnStructureCommand extends BaseCommand {
                     world = Bukkit.getWorld(args[1]);
                     location = new Location(world, x, y, z);
                 } catch (NumberFormatException ignored) {
-                    sender.sendMessage(mm.deserialize("<#dd600d>Invalid coordinates!"));
+                    sender.sendMessage(mm.deserialize(plugin.getMessages().getString("invalid-coordinates", "<#dd600d>Invalid coordinates!")));
                     return;
                 }
             } else {
-                sender.sendMessage(mm.deserialize("<#dd600d>This command has to be run by an entity!"));
+                sender.sendMessage(mm.deserialize(plugin.getMessages().getString("need-to-be-run-by-entity", "<#dd600d>This command has to be run by an entity")));
                 return;
             }
 
@@ -116,7 +116,7 @@ public class SpawnStructureCommand extends BaseCommand {
                 location = e.getLocation();
                 world = Bukkit.getWorld(args[1]);
             } else {
-                sender.sendMessage(mm.deserialize("<#dd600d>Player or entity not found!"));
+                sender.sendMessage(mm.deserialize(plugin.getMessages().getString("entity-not-found", "<#dd600d>Player or entity not found!")));
                 return;
             }
 
@@ -129,7 +129,7 @@ public class SpawnStructureCommand extends BaseCommand {
                 location = e.getLocation();
                 world = e.getWorld();
             } else {
-                sender.sendMessage(mm.deserialize("<#dd600d>Player or entity not found!"));
+                sender.sendMessage(mm.deserialize(plugin.getMessages().getString("entity-not-found", "<#dd600d>Player or entity not found!")));
                 return;
             }
 
@@ -138,23 +138,23 @@ public class SpawnStructureCommand extends BaseCommand {
             location = e.getLocation();
             world = e.getWorld();
         } else {
-            sender.sendMessage(mm.deserialize("<#dd600d>You must be an entity or a player!"));
+            sender.sendMessage(mm.deserialize(plugin.getMessages().getString("must-be-entity", "<#dd600d>You must be an entity or a player!")));
             return;
         }
 
 
 
         if (world == null) {
-            sender.sendMessage(mm.deserialize("<#dd600d>World not found!"));
+            sender.sendMessage(mm.deserialize(plugin.getMessages().getString("world-not-found", "<#dd600d>World not found!")));
             return;
         }
         structure = getStructure(args[0], world);
         if (structure == null) {
-            sender.sendMessage(mm.deserialize("<#dd600d>Structure not found!"));
+            sender.sendMessage(mm.deserialize(plugin.getMessages().getString("structure-not-found", "<#dd600d>Structure not found!")));
             return;
         }
         generate.spawnTerraStructure(world, location, structure);
-        sender.sendMessage(mm.deserialize("<gradient:#F454CF:#5457B6>Structure spawned!"));
+        sender.sendMessage(mm.deserialize(plugin.getMessages().getString("structure-spawned", "<gradient:#F454CF:#5457B6>Structure spawned!")));
 
     }
 }

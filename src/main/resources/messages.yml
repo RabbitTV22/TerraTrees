@@ -1,0 +1,11 @@
+# You can use MiniMessage in all messages.
+# https://docs.papermc.io/adventure/minimessage/format
+incorrect-syntax: "<#dd600d>You did not follow the correct syntax!"
+invalid-coordinates: "<#dd600d>Invalid coordinates!"
+need-to-be-run-by-entity: "<#dd600d>This command has to be run by an entity!"
+entity-not-found: "<#dd600d>Player or entity not found!"
+must-be-entity: "<#dd600d>You must be an entity or a player!"
+world-not-found: "<#dd600d>World not found!"
+structure-not-found: "<#dd600d>Structure not found!"
+structure-spawned: "<gradient:#F454CF:#5457B6>Structure spawned!"
+config-reloaded: "<pride><b>TerraTrees config reloaded!"

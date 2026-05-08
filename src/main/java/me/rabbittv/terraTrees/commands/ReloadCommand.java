@@ -22,9 +22,8 @@ public class ReloadCommand extends BaseCommand {
     @Description("Reload the plugin.")
     @CommandPermission("terratrees.reload")
     public void reload(CommandSender sender) {
-
         plugin.loadConfig();
-        sender.sendMessage(MiniMessage.miniMessage().deserialize("<pride><b>TerraTrees config reloaded!"));
+        sender.sendMessage(MiniMessage.miniMessage().deserialize(plugin.messages.getString("config-reloaded", "<pride><b>TerraTrees config reloaded!")));
     }
 
 }
