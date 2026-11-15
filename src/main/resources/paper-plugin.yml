@@ -1,5 +1,5 @@
 name: TerraTrees
-version: '2.0.0'
+version: ${version}
 main: me.rabbittv.terraTrees.TerraTrees
 folia-supported: true
 description: A plugin to spawn Terra structures instead of vanilla trees
