@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.10-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:26.3.build.+")
     compileOnly("com.dfsek.terra:api:7.0.0-BETA+fd3d1ce83")
     compileOnly("com.dfsek.terra:v1_21_9:7.0.0-BETA+fd3d1ce83")
     compileOnly("com.dfsek:seismic:2.5.7")
@@ -59,7 +59,7 @@ tasks {
     }
 }
 
-def targetJavaVersion = 21
+def targetJavaVersion = 25
 java {
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     sourceCompatibility = javaVersion

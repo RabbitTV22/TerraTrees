@@ -17,7 +17,6 @@ public class TreeGrowthListener implements Listener {
     private final TerraTrees plugin;
     private final SpawnStructure structure;
 
-
     public TreeGrowthListener(TerraTrees plugin, SpawnStructure structure) {
         this.plugin = plugin;
         this.structure = structure;
@@ -164,7 +163,14 @@ public class TreeGrowthListener implements Listener {
                 structure.spawnTerraStructure(world, location, plugin.getStructures().getConfigurationSection("crimson-fungus").getString("structure", "structure-terrascript-loader:huge_crimson_fungus"));
 
             }
-        }
+        } else if ((e.getSpecies() == TreeType.RED_POPLAR || e.getSpecies() == TreeType.ORANGE_POPLAR || e.getSpecies() == TreeType.YELLOW_POPLAR) && plugin.getStructures().getConfigurationSection("poplar-tree").getBoolean("enabled")) {
+            if (type == Material.POPLAR_SAPLING) {
+                e.setCancelled(true);
+                Location location = e.getLocation();
+                World world = location.getWorld();
+                structure.spawnTerraStructure(world, location, plugin.getStructures().getConfigurationSection("poplar-tree").getString("structure", "structure-terrascript-loader:spruce_tree_procedural_2"));
 
+            }
+        }
     }
 }
