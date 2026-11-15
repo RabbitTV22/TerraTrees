@@ -108,18 +108,6 @@ public class SpawnStructureCommand extends BaseCommand {
                 return;
             }
 
-        // /terratrees spawnstructure <structure> <world> <entity|player>
-        } else if (args.length == 3) {
-
-            Entity e = getEntity(args[2]);
-            if (e != null) {
-                location = e.getLocation();
-                world = Bukkit.getWorld(args[1]);
-            } else {
-                sender.sendMessage(mm.deserialize(plugin.getMessages().getString("entity-not-found", "<#dd600d>Player or entity not found!")));
-                return;
-            }
-
         // /terratrees spawnstructure <structure> <entity|player>
         } else if (args.length == 2) {
 
